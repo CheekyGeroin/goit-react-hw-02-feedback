@@ -11,22 +11,11 @@ class App extends Component {
   };
 
  
-    goodIncrement = () => {
+  handleIncrement = (label) => {
     this.setState(prevState => ({
-        good: prevState.good + 1
+      [label]: prevState[label] + 1
     }))
   }
-  neutralIncrement = () => {
-    this.setState(prevState => ({
-        neutral: prevState.neutral + 1
-    }))
-  }
-  badIncrement = () => {
-    this.setState(prevState => ({
-        bad: prevState.bad + 1
-    }))
-  }
-  
   countTotalFeedback = () => {
     return this.state.good + this.state.neutral + this.state.bad
   }
@@ -46,7 +35,7 @@ class App extends Component {
       <div>
         <div>
           <Section title="Leave your feedback" />
-          <FeedbackOptions onGoodIncrement={this.goodIncrement} onNeutralIncrement={this.neutralIncrement} onBadIncrement={this.badIncrement} />
+          <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={this.handleIncrement} />
         </div>
         <div>
           <Section title="Statistics" />
