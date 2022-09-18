@@ -5,13 +5,10 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   padding-left: 15px;
+  gap: 25px;
 `;
 
-export const Item = styled.li`
-  :not(:last-child) {
-    margin-right: 25px;
-  }
-`;
+export const Item = styled.li``;
 
 export const Button = styled.button`
   border-radius: 4px;

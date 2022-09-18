@@ -11,7 +11,7 @@ export const Statistics = ({
 }) => {
   return (
     <Container>
-      {good > 0 || neutral > 0 || bad > 0 ? (
+      {total > 0 ? (
         <div>
           <p>Good: {good}</p>
           <p>Neutral: {neutral}</p>
