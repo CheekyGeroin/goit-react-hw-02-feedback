@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Component } from 'react';
 import { Title } from './Section.styled';
 
 export const Section = ({ title, children }) => {
